@@ -14,32 +14,51 @@ import com.example.calc.homework.CalculatorImpl;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText tEdit;
-    private EditText tEdit2;
-    private Button bttn1;
-    private Button bttn2;
-    private TextView tView;
+    private TextView show;
+    private Button num1;
+    private Button num2;
+    private Button num3;
+    private Button num4;
+    private Button num5;
+    private Button num6;
+    private Button num7;
+    private Button num8;
+    private Button num9;
+    private Button num0;
+    private Button tool1;
+    private Button tool2;
+    private Button tool3;
+    private Button tool4;
+    private Button getResult;
+
+    void init(){
+        show = findViewById(R.id.show);
+        num1 = findViewById(R.id.num1);
+        num2 = findViewById(R.id.num2);
+        num3 = findViewById(R.id.num3);
+        num4 = findViewById(R.id.num4);
+        num5 = findViewById(R.id.num5);
+        num6 = findViewById(R.id.num6);
+        num7 = findViewById(R.id.num7);
+        num8 = findViewById(R.id.num8);
+        num9 = findViewById(R.id.num9);
+        num0 = findViewById(R.id.num0);
+        getResult = findViewById(R.id.getResult);
+        tool1 = findViewById(R.id.tool1);
+        tool2 = findViewById(R.id.tool2);
+        tool3 = findViewById(R.id.tool3);
+        tool4 = findViewById(R.id.tool4);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        init();
 
-        tEdit = findViewById(R.id.input);
-        tEdit2 = findViewById(R.id.input2);
-        bttn1 = findViewById(R.id.button_add);
-        bttn2 = findViewById(R.id.button_sub);
-        tView = findViewById(R.id.textview);
-        final CalculatorImpl calculator = new CalculatorImpl();
 
-        bttn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int result = calculator.add(Integer.parseInt(String.valueOf(tEdit.getText())), Integer.parseInt(String.valueOf(tEdit2.getText())));
-                tView.setText(String.valueOf(result));
-            }
-        });
+
     }
 
 }
