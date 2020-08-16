@@ -1,9 +1,9 @@
 package com.example.calc;
 
-import java.util.Stack;
+import java.util.ArrayList;
 
 public class ButtonInterface {
-    public Stack<String> stack = new Stack<>();
+    public ArrayList<String> queue = new ArrayList<>();
 
     public enum Type {
         ADD("+"),
@@ -34,8 +34,8 @@ public class ButtonInterface {
      * @param type : 사칙연산과 계산버튼에 대한 타입
      */
     public void onButton(Type type) {
-        if (stack.size() != 0 && !Type.contains(stack.lastElement())) {
-            stack.add(type.typeString);
+        if (queue.size() != 0 && !Type.contains(queue.get(queue.size() - 1))) {
+            queue.add(type.typeString);
         }
     }
 
@@ -44,7 +44,7 @@ public class ButtonInterface {
      * @param number : 정수형 숫자
      */
     public void onButton(int number) {
-        stack.add(String.valueOf(number));
+        queue.add(String.valueOf(number));
     }
 
     /**
@@ -52,6 +52,6 @@ public class ButtonInterface {
      * @return : 현재 완성된 수식
      */
     public String getExpression() {
-        return stack.toString().replace("[", "").replace("]", "").replace(",", "").replace(" ", "");
+        return queue.toString().replace("[", "").replace("]", "").replace(",", "").replace(" ", "");
     }
 }
