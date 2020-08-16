@@ -61,4 +61,57 @@ public class ButtonInterface {
     public String getExpression() {
         return queue.toString().replace("[", "").replace("]", "").replace(",", "").replace(" ", "");
     }
+
+    /**
+     * =을 눌렀을때 계산결과를 리턴해준다.
+     * @return :결과값
+     */
+    public int doMath(){
+        int num1, num2, result=0;
+        String tool;
+
+        num1 = Integer.parseInt(queue.get(0));
+        queue.remove(0);
+        tool = queue.get(0);
+        queue.remove(0);
+        num2 = Integer.parseInt(queue.get(0));
+        queue.remove(0);
+
+        if(tool.equals("+")){
+            result = num1 + num2;
+        }
+        else if(tool.equals("-")){
+            result = num1 - num2;
+        }
+        else if(tool.equals("*")){
+            result = num1 * num2;
+        }
+        else if(tool.equals("/")){
+            result = num1 / num2;
+        }
+
+        while(queue.size() != 0){
+            tool = queue.get(0);
+            queue.remove(0);
+            num1 = Integer.parseInt(queue.get(0));
+            queue.remove(0);
+
+
+            if(tool.equals("+")){
+                result = result + num1;
+            }
+            else if(tool.equals("-")){
+                result = result - num1;
+            }
+            else if(tool.equals("*")){
+                result = result * num1;
+            }
+            else if(tool.equals("/")){
+                result = result / num1;
+            }
+        }
+
+        return result;
+    }
+
 }

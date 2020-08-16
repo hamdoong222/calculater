@@ -39,6 +39,7 @@
 
             <Button
                 android:id="@+id/num3"
+                android:tag="3"
                 android:onClick="onClickNumber"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -46,6 +47,8 @@
             <Button
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tool1"
+                android:tag="+"
+                android:onClick="onClickTool"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="+"></Button>
@@ -57,24 +60,32 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num4"
+                android:tag="4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="4"></Button>
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num5"
+                android:tag="5"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="5"></Button>
 
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num6"
+                android:tag="6"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="6"></Button>
             <Button
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tool2"
+                android:tag="-"
+                android:onClick="onClickTool"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="-"></Button>
@@ -86,24 +97,32 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num7"
+                android:tag="7"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="7"></Button>
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num8"
+                android:tag="8"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="8"></Button>
 
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num9"
+                android:tag="9"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="9"></Button>
             <Button
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tool3"
+                android:tag="*"
+                android:onClick="onClickTool"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="*"></Button>
@@ -116,23 +135,30 @@
 
             <Button
                 android:id="@+id/cancel"
+                android:tag="C"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="C"></Button>
             <Button
+                android:onClick="onClickNumber"
                 android:id="@+id/num0"
+                android:tag="0"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="0"></Button>
 
             <Button
                 android:id="@+id/getResult"
+                android:tag="="
+                android:onClick="onClickResult"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="="></Button>
             <Button
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tool4"
+                android:tag="/"
+                android:onClick="onClickTool"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="/"></Button>
