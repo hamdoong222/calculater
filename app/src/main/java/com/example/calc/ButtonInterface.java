@@ -44,7 +44,14 @@ public class ButtonInterface {
      * @param number : 정수형 숫자
      */
     public void onButton(int number) {
-        queue.add(String.valueOf(number));
+        String item = queue.get(queue.size() - 1);
+        try {
+            int prevNumber = Integer.parseInt(item);
+            queue.remove(queue.size() - 1);
+            queue.add(prevNumber + String.valueOf(number));
+        } catch (NumberFormatException e) {
+            queue.add(String.valueOf(number));
+        }
     }
 
     /**
