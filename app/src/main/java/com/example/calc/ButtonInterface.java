@@ -44,12 +44,12 @@ public class ButtonInterface {
      * @param number : 정수형 숫자
      */
     public void onButton(int number) {
-        String item = queue.get(queue.size() - 1);
         try {
+            String item = queue.get(queue.size() - 1);
             int prevNumber = Integer.parseInt(item);
             queue.remove(queue.size() - 1);
             queue.add(prevNumber + String.valueOf(number));
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             queue.add(String.valueOf(number));
         }
     }
