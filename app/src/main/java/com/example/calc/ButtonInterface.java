@@ -3,7 +3,7 @@ package com.example.calc;
 import java.util.Stack;
 
 public class ButtonInterface {
-    private Stack<String> stack = new Stack<>();
+    public Stack<String> stack = new Stack<>();
 
     public enum Type {
         ADD("+"),

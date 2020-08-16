@@ -24,17 +24,22 @@
 
             <Button
                 android:id="@+id/num1"
+                android:tag="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="1"></Button>
             <Button
+                android:tag="2"
                 android:id="@+id/num2"
+                android:onClick="onClickNumber"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="2"></Button>
 
             <Button
                 android:id="@+id/num3"
+                android:onClick="onClickNumber"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="3"></Button>
